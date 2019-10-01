@@ -142,7 +142,163 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-images"></i>
+              <p>
+                Albums
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('album.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Album</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('album.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Albums </p>
+                </a>
+              </li>
+            </ul>
+          </li>
           
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-thumbs-up"></i>
+              <p>
+                Reviews
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('review.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Review</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('review.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Reviews </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+           <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-image"></i>
+              <p>
+                Carousels
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('carousel.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Carousel</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('carousel.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Carousels </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+           <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-handshake"></i>
+              <p>
+                Choose US
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('choose.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Feature</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('choose.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Features </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>
+                Event
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('event.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Event</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('event.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Events </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-registered"></i>
+              <p>
+                Event Registration
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('eregister.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Registation</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('eregister.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Events Registration </p>
+                </a>
+              </li>
+            </ul>
+          </li>
           
           
         </ul>

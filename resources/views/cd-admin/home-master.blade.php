@@ -8,9 +8,13 @@
   <title>@yield('page-title')</title>
 
 
- <link rel="stylesheet" href="/css/app.css">
+ {{-- <link rel="stylesheet" href="/css/app.css"> --}}
+ <link rel="stylesheet" href="{{ url('/css/app.css') }}">
+
  <link rel="stylesheet" href="{{ asset('cd-admin/creatu/css/btn.css') }}">
  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.css" rel="stylesheet">
+ 
+ 
 
 
 
@@ -41,7 +45,12 @@
 </body>
  
 
-<script src="/js/app.js"></script>
+{{-- <script src="/js/app.js"></script> --}}
+<script src="{{ asset('/js/app.js') }}"></script>
+
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>
 <script>
       $(document).ready(function() {
@@ -49,6 +58,10 @@
 
         });
 </script>
+
+
+
+
  <script>
             $('.preview').on('change',function(){
                 //get the file name
@@ -57,6 +70,20 @@
                 $(this).next('.custom-file-label').html(fileName);
             })
 </script>
+<script src="{{ asset('cd-admin/creatu/js/daterangepicker.js') }}"></script>
+<script>
+  $(function () {
+    
+    $('#reservationtime').daterangepicker({
+      timePicker: true,
+      timePickerIncrement: 30,
+      locale: {
+        format: 'DD/MM/YYYY  hh:mm A'
+      }
+    })
+    })
+</script>
+
 
 @include('sweetalert::alert')
 

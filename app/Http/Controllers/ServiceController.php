@@ -63,14 +63,14 @@ class ServiceController extends Controller
               $a['image'] = $fileName;
               $final = array_merge($data,$a);
               DB::table('services')->where('id',$serv->id)->update($final);
-              return redirect('/serviceindex')->with('toast_success','About Us Updated Successfully!');
+              return redirect('/serviceindex')->with('toast_success','Review Updated Successfully!');
           }
           $a = [];
           $a['updated_at'] = Carbon::now();
           $data = $this->uvalidateRequest();
           $final = array_merge($data,$a);
           DB::table('services')->where('id',$serv->id)->update($final);
-          return redirect('/serviceindex')->withToastSuccess('About Us Updated Successfully!');
+          return redirect('/serviceindex')->withToastSuccess('Review Updated Successfully!');
      }
 
      public function serviceshow(Service $serv)

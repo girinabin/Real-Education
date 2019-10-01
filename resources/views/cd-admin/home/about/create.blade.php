@@ -83,12 +83,10 @@
 
 		                <div class="card-footer text-center">
 		                  <button type="submit" class="btn btn-primary float-left">Submit</button>
+		                  <a href="{{ URL()->previous() }}" class="btn btn-danger float-right">Go Back</a>
 		                </div>
 		              </form>
-		              <div class=" card-footer text-center ">
-		              	<a href="{{ URL()->previous() }}"><button class="btn btn-danger float-right">Cancel</button></a>
-		         	  </div>
-		             
+		              
 		    	</div>
 		    	 
 </div>

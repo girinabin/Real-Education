@@ -1,20 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-// Route::get('/home', function () {
-//     return view('cd-admin.home.home');
-// });
-
 
 Auth::routes();
 // About us
@@ -53,6 +38,70 @@ Route::post('/testpstatus/{tst}','TestPreparationController@testpstatus')->name(
 Route::get('/testpshow/{tst}','TestPreparationController@testpshow')->name('testp.show');
 Route::post('/testpdestroy/{tst}','TestPreparationController@testpdestroy')->name('testp.destroy');
 Route::post('/testpupdate/{tst}','TestPreparationController@testpupdate')->name('testp.update');
+
+
+// Gallery
+Route::get('/album','AlbumController@albumcreate')->name('album.create');
+Route::post('/albumstore','AlbumController@albumstore')->name('album.store');
+Route::get('/albumindex','AlbumController@albumindex')->name('album.index');
+Route::post('/albumstatus/{alb}','AlbumController@albumstatus')->name('album.status');
+Route::post('/imagestatus/{img}','AlbumController@imagestatus')->name('image.status');
+
+
+Route::post('/albumdestroy/{alb}','AlbumController@albumdestroy')->name('album.destroy');
+Route::get('/image/{id}','AlbumController@imagecreate')->name('image.create');
+Route::get('/albumshow/{alb}','AlbumController@albumshow')->name('album.show');
+Route::post('/imagestore','AlbumController@imagestore')->name('image.store');
+Route::post('/imagedestroy/{img}','AlbumController@imagedestroy')->name('image.destroy');
+
+// Review
+Route::get('/review','ReviewController@reviewcreate')->name('review.create');
+Route::post('/reviewstore','ReviewController@reviewstore')->name('review.store');
+Route::get('/reviewindex','ReviewController@reviewindex')->name('review.index');
+Route::post('/reviewstatus/{rev}','ReviewController@reviewstatus')->name('review.status');
+Route::get('/reviewshow/{rev}','ReviewController@reviewshow')->name('review.show');
+Route::post('/reviewupdate/{rev}','ReviewController@reviewupdate')->name('review.update');
+Route::post('/reviewdestroy/{rev}','ReviewController@reviewdestroy')->name('review.destroy');
+
+// Carousel
+Route::get('/carousel','CarouselController@carouselcreate')->name('carousel.create');
+Route::post('/carouselstore','CarouselController@carouselstore')->name('carousel.store');
+Route::get('/carouselindex','CarouselController@carouselindex')->name('carousel.index');
+Route::post('/carouselstatus/{car}','CarouselController@carouselstatus')->name('carousel.status');
+Route::get('/carouselshow/{car}','CarouselController@carouselshow')->name('carousel.show');
+Route::post('/carouseldestroy/{car}','CarouselController@carouseldestroy')->name('carousel.destroy');
+
+// Why Us
+
+Route::get('/choose','ChooseController@choosecreate')->name('choose.create');
+Route::post('/choosestore','ChooseController@choosestore')->name('choose.store');
+Route::get('/chooseindex','ChooseController@chooseindex')->name('choose.index');
+Route::post('/choosestatus/{cho}','ChooseController@choosestatus')->name('choose.status');
+Route::post('/chooseupdate/{cho}','ChooseController@chooseupdate')->name('choose.update');
+Route::get('/chooseshow/{cho}','ChooseController@chooseshow')->name('choose.show');
+Route::post('/choosedestroy/{cho}','ChooseController@choosedestroy')->name('choose.destroy');
+
+// Event
+Route::get('/event','EventController@eventcreate')->name('event.create');
+Route::post('/eventstore','EventController@eventstore')->name('event.store');
+Route::get('/eventindex','EventController@eventindex')->name('event.index');
+Route::post('/eventstatus/{eve}','EventController@eventstatus')->name('event.status');
+Route::get('/eventshow/{eve}','EventController@eventshow')->name('event.show');
+Route::post('/eventupdate/{eve}','EventController@eventupdate')->name('event.update');
+Route::post('/eventdestroy/{eve}','EventController@eventdestroy')->name('event.destroy');
+
+// EventRegistration
+
+Route::get('/eregister','EventRegistrationController@eregistercreate')->name('eregister.create');
+Route::post('/eregisterstore','EventRegistrationController@eregisterstore')->name('eregister.store');
+Route::get('/eregisterindex','EventRegistrationController@eregisterindex')->name('eregister.index');
+Route::get('/eregistershow/{er}','EventRegistrationController@eregistershow')->name('eregister.show');
+Route::post('/eregisterdestroy/{er}','EventRegistrationController@eregisterdestroy')->name('eregister.destroy');
+Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
+
+
+
+
 
 
 
