@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class BookingAcceptedFormMail extends Mailable
+class MessageFormMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -28,7 +28,7 @@ class BookingAcceptedFormMail extends Mailable
      * @return $this
      */
     public function build()
-    {  
-        return $this->markdown('emails.booking.baccepted-form');
+    {
+        return $this->markdown('emails.contact.message-form');
     }
 }

@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class BookingRejectedFormMail extends Mailable
+class QuickFormMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -28,7 +28,7 @@ class BookingRejectedFormMail extends Mailable
      * @return $this
      */
     public function build()
-    {  
-        return $this->markdown('emails.booking.brejected-form');
+    {
+        return $this->markdown('emails.contact.quick-form');
     }
 }

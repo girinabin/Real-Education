@@ -299,6 +299,32 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-envelope"></i>
+              <p>
+                Message
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('message.create') }}" class="nav-link ">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Message</p>
+                </a>
+              </li>
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('message.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Message </p>
+                </a>
+              </li>
+            </ul>
+          </li>
           
           
         </ul>

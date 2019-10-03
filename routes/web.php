@@ -98,6 +98,48 @@ Route::get('/eregisterindex','EventRegistrationController@eregisterindex')->name
 Route::get('/eregistershow/{er}','EventRegistrationController@eregistershow')->name('eregister.show');
 Route::post('/eregisterdestroy/{er}','EventRegistrationController@eregisterdestroy')->name('eregister.destroy');
 Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
+Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
+
+Route::post('/eregisterreply/{er}','EventRegistrationController@eregisterreply')->name('eregister.reply');
+Route::post('/eregisterreply','EventRegistrationController@eregisterreply1')->name('eregister.reply1');
+Route::get('/eregistersentmsg','EventRegistrationController@eregistersentmsg')->name('eregister.sentmsg');
+Route::post('/einboxdestroy/{eve}','EventRegistrationController@einboxdestroy')->name('einbox.destroy');
+Route::post('/esentdestroy/{eve}','EventRegistrationController@esentdestroy')->name('esent.destroy');
+
+
+
+
+// Message
+
+Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
+Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
+
+Route::post('/eregisterreply/{er}','EventRegistrationController@eregisterreply')->name('eregister.reply');
+Route::post('/eregisterreply','EventRegistrationController@eregisterreply1')->name('eregister.reply1');
+Route::get('/eregistersentmsg','EventRegistrationController@eregistersentmsg')->name('eregister.sentmsg');
+
+Route::get('/message','MessageController@messagecreate')->name('message.create');
+Route::get('/messageindex','MessageController@messageindex')->name('message.index');
+Route::post('/messagestore','MessageController@messagestore')->name('message.store');
+Route::get('/messageshow/{msg}','MessageController@messageshow')->name('message.show');
+Route::get('/messagecompose/{msg}','MessageController@messagecompose')->name('message.compose');
+Route::post('/messagereply','MessageController@messagereply')->name('message.reply');
+Route::get('/messagesent','MessageController@messagesent')->name('message.sent');
+Route::get('/messagesentshow/{msg}','MessageController@messagesentshow')->name('message.sentshow');
+Route::post('/inboxdestroy/{msg}','MessageController@inboxdestroy')->name('inbox.destroy');
+Route::post('/sentdestroy/{msg}','MessageController@sentdestroy')->name('sent.destroy');
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

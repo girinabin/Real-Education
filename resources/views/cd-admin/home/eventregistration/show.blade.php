@@ -47,7 +47,7 @@
       </div>
       <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <form action="{{ route('eregister.destroy',$er->id) }}" method="POST">
+            <form action="{{ route('einbox.destroy',$er->id) }}" method="POST">
               @csrf
             <button type="submit" class="btn btn-danger">Delete Event Registration</button>
             </form>

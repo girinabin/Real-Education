@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ContactFormMail extends Mailable
+class EventFormMail extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -29,6 +29,6 @@ class ContactFormMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.contact.contact-form');
+        return $this->markdown('emails.contact.eventreg-form');
     }
 }

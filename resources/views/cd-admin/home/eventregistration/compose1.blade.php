@@ -4,8 +4,6 @@
   <div class="container-fluid">
     <div class="clearfix mt-1">
       <ul class="breadcrumb float-right">
-        <li>Event</li>
-        <li><a href="{{ route('eregister.index') }}">View Events</a></li>
         <li>Compose</li>
       </ul>
     </div>
@@ -16,18 +14,22 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <form action="{{ route('eregister.reply',$er->id) }}" method="POST">
+          <form action="{{ route('eregister.reply1') }}" method="POST">
             @csrf
             <div class="form-group">
-              <input class="form-control" placeholder="To:" value="{{e($er['email'])}}" name="emailto">
+              <div class="text text-danger">{{$errors->first('emailto')}}</div>
+              <input class="form-control" placeholder="To:" value="{{old('emailto')}}" name="emailto">
             </div>
             <div class="form-group">
+              <div class="text text-danger">{{$errors->first('subject')}}</div>
+
               <input class="form-control" placeholder="Subject:" value="{{old('subject')}}" name="subject">
             </div>
             <div class="form-group">
+              <div class="text text-danger">{{$errors->first('message')}}</div>
+
               <textarea name="message" id="message" cols="30" rows="10" class="form-control summernote" >{{old('message')}}</textarea>
             </div>
-            <input type="hidden" name="contact_id" value="{{$er['id']}}">
             
             
             <!-- /.card-body -->
