@@ -14,11 +14,11 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <form action="{{ route('eregister.reply1') }}" method="POST">
+          <form action="{{ route('message.reply',$msg->id) }}" method="POST">
             @csrf
             <div class="form-group">
               <div class="text text-danger">{{$errors->first('emailto')}}</div>
-              <input class="form-control" placeholder="To:" value="{{old('emailto')}}" name="emailto">
+              <input class="form-control" placeholder="To:" value="{{e($msg['emailto'])}}" name="emailto">
             </div>
             <div class="form-group">
               <div class="text text-danger">{{$errors->first('subject')}}</div>
@@ -30,6 +30,8 @@
 
               <textarea name="message" id="message" cols="30" rows="10" class="form-control summernote" >{{old('message')}}</textarea>
             </div>
+            <input type="hidden" name="message_id" value="{{$msg['id']}}">
+            
             
             
             <!-- /.card-body -->

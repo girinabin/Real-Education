@@ -46,6 +46,11 @@ class MessageController extends Controller
    		return view('cd-admin.home.message.compose',compact('msg'));
     }
 
+    public function messagecompose1(MessageReply $msg)
+    {   
+        return view('cd-admin.home.message.compose1',compact('msg'));
+    }
+
     public function messagesentshow(MessageReply $msg)
     {
    		return view('cd-admin.home.message.sentshow',compact('msg'));
@@ -74,10 +79,10 @@ class MessageController extends Controller
     public function messagesent()
     {
         $messages = MessageReply::orderBy('id','desc')->get();
-        $eregisters = EventRegister::all();
+        // $eregisters = EventRegister::all();
 
 
-        return view('cd-admin.home.message.sentmsg',compact('messages','eregisters'));
+        return view('cd-admin.home.message.sentmsg',compact('messages'));
     }
 
     public function inboxdestroy(Message $msg)

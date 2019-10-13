@@ -5,7 +5,8 @@
     <div class="clearfix mt-1">
       <ul class="breadcrumb float-right">
         <li>Event Registration</li>
-        <li>View Events Registration</li>
+      <li><a href="{{ route('eregister.index') }}">View EventRegistations</a></li>
+        
         <li>Sent</li>
 
       </ul>
@@ -22,7 +23,7 @@
                 <li class="nav-item active">
                   <a href="{{ route('eregister.index') }}" class="nav-link">
                     <i class="fas fa-inbox"></i> Inbox
-                    <span class="badge bg-primary float-right">12</span>
+                    <span class="badge bg-primary float-right"></span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -60,11 +61,11 @@
                     <td>
                       <div >
                        <button  class="btn btn-danger" data-toggle="modal" data-target="#delete{{$creply->id}}"><i class="fas fa-trash"></i></button>
-                       <a href="{{-- {{ route('creply.show',$creply->id) }} --}}">
+                       <a href="{{ route('eregister.sentshow',$creply->id) }}">
                          <button class="btn btn-success"><i class="fas fa-eye"></i></button>
                        </a>
                        
-                        <a href="{{ route('creply.compose',$creply->id) }}">
+                        <a href="{{ route('eregister.compose',$creply->id) }}">
                           <button class="btn btn-primary"><i class="fas fa-reply"></i></button>
                         </a>
                         
@@ -119,7 +120,7 @@
       </div>
       <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <form action="{{-- {{ route('creply.destroy',$creply->id) }} --}}" method="POST">
+            <form action="{{ route('esent.destroy',$creply->id) }}" method="POST">
               @csrf
             <button type="submit" class="btn btn-danger">Delete Sent Message</button>
             </form>

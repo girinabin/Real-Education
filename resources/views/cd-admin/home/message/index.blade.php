@@ -20,7 +20,7 @@
                 <li class="nav-item active">
                   <a href="{{ route('message.index') }}" class="nav-link">
                     <i class="fas fa-inbox"></i> Inbox
-                    <span class="badge bg-primary float-right">12</span>
+                    <span class="badge bg-primary float-right"></span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -109,7 +109,7 @@
         </button>
       </div>
       <div class="modal-body">
-        {{$message['username']}}??
+        
       </div>
       <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

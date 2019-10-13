@@ -9,6 +9,8 @@ use App\EventRegister;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EventFormMail; 
 use App\Mail\QuickFormMail; 
+use App\Mail\EventRegistrationFormMail; 
+
 
 use App\ContactReply;
 
@@ -26,7 +28,9 @@ class EventRegistrationController extends Controller
     	$a = [];
     	$a['created_at'] = Carbon::now();
     	$final = array_merge($data,$a);
-    	DB::table('event_registers')->insert($final);
+    	// DB::table('event_registers')->insert($final);
+        Mail::to($data['email'])->send(new EventRegistrationFormMail($data));
+
    	 	return redirect()->back()->with('toast_success', 'Event Registration Successfully!');
     }
 
@@ -38,10 +42,15 @@ class EventRegistrationController extends Controller
 
     public function eregistersentmsg()
     {
-        $creplys = ContactReply::all();
-        $eregisters = EventRegister::all();
+        $creplys = ContactReply::orderBy('id','desc')->get();
+        // $eregisters = EventRegister::all();
 
-        return view('cd-admin.home.eventregistration.sentmsg',compact('creplys','eregisters'));
+        return view('cd-admin.home.eventregistration.sentmsg',compact('creplys'));
+    }
+
+     public function eregistersentshow(ContactReply $er)
+    {
+        return view('cd-admin.home.eventregistration.sentshow',compact('er'));
     }
 
      public function eregistershow(EventRegister $er)
@@ -74,6 +83,7 @@ class EventRegistrationController extends Controller
             'message' => 'required',
             'contact_id' => 'required'
         ]);
+
         $a = [];
         $a['created_at'] = Carbon::now();
         $final = array_merge($a,$data);

@@ -19,7 +19,7 @@
           <img src="{{ asset('img/man.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
+          <a href="#" class="d-block">{{Auth::user()['name']}}</a>
         </div>
       </div>
 

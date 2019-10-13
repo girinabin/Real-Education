@@ -27,7 +27,7 @@
 
                             <p class="text-center">
                            
-                                <small>{{Auth::user()->name}}</small><br>
+                                <small>{{Auth::user()['name']}}</small><br>
                                 <small>Superadmin</small>
 
                             </p>
@@ -38,7 +38,7 @@
                                 <a href="#" class="btn btn-info btn-flat">Profile</a>
                             </div> --}}
                             <div class="float-right pr-1">
-                                <a href="" class="btn btn-danger btn-flat">Log out</a>
+                                <a href="{{ route('logout') }}" class="btn btn-danger btn-flat">Log out</a>
                             </div>
                         </li>
                     </ul>

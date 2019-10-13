@@ -2,6 +2,10 @@
 
 
 Auth::routes();
+
+// Logout
+Route::get('/logout','DashboardController@logout')->name('logout');
+
 // About us
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about','AboutController@aboutcreate')->name('about.create');
@@ -96,6 +100,8 @@ Route::get('/eregister','EventRegistrationController@eregistercreate')->name('er
 Route::post('/eregisterstore','EventRegistrationController@eregisterstore')->name('eregister.store');
 Route::get('/eregisterindex','EventRegistrationController@eregisterindex')->name('eregister.index');
 Route::get('/eregistershow/{er}','EventRegistrationController@eregistershow')->name('eregister.show');
+Route::get('/eregistersentshow/{er}','EventRegistrationController@eregistersentshow')->name('eregister.sentshow');
+
 Route::post('/eregisterdestroy/{er}','EventRegistrationController@eregisterdestroy')->name('eregister.destroy');
 Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
 Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
@@ -111,18 +117,20 @@ Route::post('/esentdestroy/{eve}','EventRegistrationController@esentdestroy')->n
 
 // Message
 
-Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
-Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
+// Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
+// Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
 
-Route::post('/eregisterreply/{er}','EventRegistrationController@eregisterreply')->name('eregister.reply');
-Route::post('/eregisterreply','EventRegistrationController@eregisterreply1')->name('eregister.reply1');
-Route::get('/eregistersentmsg','EventRegistrationController@eregistersentmsg')->name('eregister.sentmsg');
+// Route::post('/eregisterreply/{er}','EventRegistrationController@eregisterreply')->name('eregister.reply');
+// Route::post('/eregisterreply','EventRegistrationController@eregisterreply1')->name('eregister.reply1');
+// Route::get('/eregistersentmsg','EventRegistrationController@eregistersentmsg')->name('eregister.sentmsg');
 
 Route::get('/message','MessageController@messagecreate')->name('message.create');
 Route::get('/messageindex','MessageController@messageindex')->name('message.index');
 Route::post('/messagestore','MessageController@messagestore')->name('message.store');
 Route::get('/messageshow/{msg}','MessageController@messageshow')->name('message.show');
 Route::get('/messagecompose/{msg}','MessageController@messagecompose')->name('message.compose');
+Route::get('/messagecompose1/{msg}','MessageController@messagecompose1')->name('message.compose1');
+
 Route::post('/messagereply','MessageController@messagereply')->name('message.reply');
 Route::get('/messagesent','MessageController@messagesent')->name('message.sent');
 Route::get('/messagesentshow/{msg}','MessageController@messagesentshow')->name('message.sentshow');

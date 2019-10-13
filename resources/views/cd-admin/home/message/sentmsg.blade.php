@@ -22,7 +22,7 @@
                 <li class="nav-item active">
                   <a href="{{ route('message.index') }}" class="nav-link">
                     <i class="fas fa-inbox"></i> Inbox
-                    <span class="badge bg-primary float-right">12</span>
+                    <span class="badge bg-primary float-right"></span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -64,7 +64,7 @@
                          <button class="btn btn-success"><i class="fas fa-eye"></i></button>
                        </a>
                        
-                        <a href="{{ route('eregister.compose',$eregister->id) }}">
+                        <a href="{{ route('message.compose1',$message['id']) }}">
                           <button class="btn btn-primary"><i class="fas fa-reply"></i></button>
                         </a>
                        

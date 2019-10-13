@@ -5,7 +5,9 @@
     <div class="clearfix mt-1">
       <ul class="breadcrumb float-right">
         <li>Event</li>
-        <li><a href="{{ route('eregister.index') }}">View Events</a></li>
+        <li><a href="{{ route('eregister.index') }}">View Events Registration</a></li>
+        <li><a href="{{ route('eregister.sentmsg') }}">Sent</a></li>
+
         <li>Compose</li>
       </ul>
     </div>
@@ -22,9 +24,13 @@
               <input class="form-control" placeholder="To:" value="{{e($er['email'])}}" name="emailto">
             </div>
             <div class="form-group">
+              <div class="text text-danger">{{$errors->first('subject')}}</div>
+
               <input class="form-control" placeholder="Subject:" value="{{old('subject')}}" name="subject">
             </div>
             <div class="form-group">
+              <div class="text text-danger">{{$errors->first('message')}}</div>
+
               <textarea name="message" id="message" cols="30" rows="10" class="form-control summernote" >{{old('message')}}</textarea>
             </div>
             <input type="hidden" name="contact_id" value="{{$er['id']}}">
