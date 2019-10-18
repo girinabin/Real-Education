@@ -7,7 +7,7 @@ Auth::routes();
 Route::get('/logout','DashboardController@logout')->name('logout');
 
 // About us
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'DashboardController@index')->name('home');
 Route::get('/about','AboutController@aboutcreate')->name('about.create');
 Route::get('/aboutshow','AboutController@aboutshow')->name('about.show');
 Route::post('/aboutstore','AboutController@aboutstore')->name('about.store');
@@ -136,6 +136,13 @@ Route::get('/messagesent','MessageController@messagesent')->name('message.sent')
 Route::get('/messagesentshow/{msg}','MessageController@messagesentshow')->name('message.sentshow');
 Route::post('/inboxdestroy/{msg}','MessageController@inboxdestroy')->name('inbox.destroy');
 Route::post('/sentdestroy/{msg}','MessageController@sentdestroy')->name('sent.destroy');
+
+// Quick mail
+
+Route::get('/quickmail','QuickMailController@qindex')->name('quick.index');
+Route::get('/quickmailview/{quick}','QuickMailController@qview')->name('quick.view');
+Route::post('/qdestroy/{quick}','QuickMailController@qdestroy')->name('quick.destroy');
+Route::get('qcompose/{quick}','QuickMailController@qcompose')->name('quick.compose');
 
 
 

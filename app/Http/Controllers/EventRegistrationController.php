@@ -28,7 +28,7 @@ class EventRegistrationController extends Controller
     	$a = [];
     	$a['created_at'] = Carbon::now();
     	$final = array_merge($data,$a);
-    	// DB::table('event_registers')->insert($final);
+    	DB::table('event_registers')->insert($final);
         Mail::to($data['email'])->send(new EventRegistrationFormMail($data));
 
    	 	return redirect()->back()->with('toast_success', 'Event Registration Successfully!');
