@@ -26,17 +26,19 @@
                             <img src="{{asset('img/man.png')}}" style="height: 70px;width: 70px; margin-left: 45px;"  alt="User Image" class="float">
 
                             <p class="text-center">
+                                <?php $user = Auth::user();
+                                ?>
                            
-                                <small>{{Auth::user()->name}}</small><br>
+                                <small>{{$user['name']}}</small><br>
                                 <small>Superadmin</small>
 
                             </p>
                         </li>
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
+                            {{-- <div class="pull-left">
                                 <a href="#" class="btn btn-info btn-flat">Profile</a>
-                            </div>
+                            </div> --}}
                             <div class="float-right pr-1">
                                 <a href="{{ route('logout') }}" class="btn btn-danger btn-flat">Log out</a>
                             </div>

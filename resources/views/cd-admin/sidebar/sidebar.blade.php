@@ -1,27 +1,24 @@
-<body class="hold-transition sidebar-mini layout-fixed">
 <div >
 
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="#" class="brand-link">
-      <img src="{{ asset('img/lightroom.png') }}" alt="" class="brand-image img-circle elevation-3"
-           style="opacity: .8">Real Education
-      <span class="brand-text font-weight-light">Real Education</span>
-    </a>
+    {{--  --}}
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('img/man.png') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('img/lightroom.png') }}" class="img-circle elevation-2" alt="logo">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
+          
+          <a href="#" class="d-block">RealEducation</a>
         </div>
       </div>
+
+      
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -31,7 +28,7 @@
            
                 
           <li class="nav-item has-treeview ">
-            <a href="{{ route('home') }}" class="nav-link ">
+            <a href="{{ route('dashboard') }}" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -42,14 +39,14 @@
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('service.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-cogs"></i>
               <p>
                 Services
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('service.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -62,18 +59,18 @@
                   <p>View Service</p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
           
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('about.show') }}" class="nav-link ">
               <i class="nav-icon fas fa-address-card"></i>
               <p>
                 About US
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('about.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -88,18 +85,18 @@
                   <p>View About</p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('abroad.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-graduation-cap"></i>
               <p>
                 Study Abroad
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('abroad.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -114,18 +111,18 @@
                   <p>View Country </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('testp.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-book-open"></i>
               <p>
                 Test Preparation
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('testp.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -140,18 +137,18 @@
                   <p>View Test </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('album.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-images"></i>
               <p>
                 Albums
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('album.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -166,19 +163,19 @@
                   <p>View Albums </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
           
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('review.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-thumbs-up"></i>
               <p>
                 Reviews
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('review.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -193,18 +190,18 @@
                   <p>View Reviews </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
            <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('carousel.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-image"></i>
               <p>
                 Carousels
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('carousel.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -219,18 +216,18 @@
                   <p>View Carousels </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
            <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('choose.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Choose US
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('choose.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -245,18 +242,18 @@
                   <p>View Features </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('event.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>
                 Event
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('event.create') }}" class="nav-link ">
                   <i class="fas fa-plus-circle"></i>
@@ -271,7 +268,7 @@
                   <p>View Events </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           <li class="nav-item has-treeview ">
@@ -279,7 +276,7 @@
               <i class="nav-icon fas fa-registered"></i>
               <p>
                 Event Registration
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-down"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -305,7 +302,7 @@
               <i class="nav-icon fas fa-envelope"></i>
               <p>
                 Message
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-down"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -327,14 +324,14 @@
           </li>
 
           <li class="nav-item has-treeview ">
-            <a href="#" class="nav-link ">
+            <a href="{{ route('quick.index') }}" class="nav-link ">
               <i class="nav-icon fas fa-envelope-open"></i>
               <p>
                 QuickMail
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas fa-angle-right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               
               
              
@@ -344,7 +341,34 @@
                   <p>View QuickMail </p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
+          </li>
+
+          <li class="nav-item has-treeview ">
+            <a href="{{ route('pro.index') }}" class="nav-link ">
+              <i class="nav-icon fas fa-procedures"></i>
+              <p>
+                Study Procedure
+                <i class="right fas fa-angle-right"></i>
+              </p>
+            </a>
+            {{-- <ul class="nav nav-treeview">
+              
+              
+             
+              <li class="nav-item">
+                <a href="{{ route('pro.create') }}" class="nav-link">
+                  <i class="fas fa-plus-circle"></i>
+                  <p>Add Procedure </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('pro.index') }}" class="nav-link">
+                  <i class="fas fa-eye"></i>
+                  <p>View Procedure </p>
+                </a>
+              </li>
+            </ul> --}}
           </li>
           
           
@@ -364,7 +388,6 @@
 
 
 
-</body>
 
 
 

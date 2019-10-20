@@ -2,12 +2,19 @@
 
 
 Auth::routes();
+Route::get('/homedashboard', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function (){
+
 
 // Logout
 Route::get('/logout','DashboardController@logout')->name('logout');
 
+
+// Dashboard
+Route::get('/dashboard','DashboardController@index')->name('dashboard');
+
 // About us
-Route::get('/home', 'DashboardController@index')->name('home');
 Route::get('/about','AboutController@aboutcreate')->name('about.create');
 Route::get('/aboutshow','AboutController@aboutshow')->name('about.show');
 Route::post('/aboutstore','AboutController@aboutstore')->name('about.store');
@@ -117,12 +124,6 @@ Route::post('/esentdestroy/{eve}','EventRegistrationController@esentdestroy')->n
 
 // Message
 
-// Route::get('/eregistercompose/{er}','EventRegistrationController@eregistercompose')->name('eregister.compose');
-// Route::get('/eregistercompose1','EventRegistrationController@eregistercompose1')->name('eregister.compose1');
-
-// Route::post('/eregisterreply/{er}','EventRegistrationController@eregisterreply')->name('eregister.reply');
-// Route::post('/eregisterreply','EventRegistrationController@eregisterreply1')->name('eregister.reply1');
-// Route::get('/eregistersentmsg','EventRegistrationController@eregistersentmsg')->name('eregister.sentmsg');
 
 Route::get('/message','MessageController@messagecreate')->name('message.create');
 Route::get('/messageindex','MessageController@messageindex')->name('message.index');
@@ -144,6 +145,23 @@ Route::get('/quickmailview/{quick}','QuickMailController@qview')->name('quick.vi
 Route::post('/qdestroy/{quick}','QuickMailController@qdestroy')->name('quick.destroy');
 Route::get('qcompose/{quick}','QuickMailController@qcompose')->name('quick.compose');
 
+// Abroad study Procedure
+
+Route::get('/procedure','StudyProcedureController@procreate')->name('pro.create');
+Route::post('/procedurestore','StudyProcedureController@prostore')->name('pro.store');
+Route::get('/procedureindex','StudyProcedureController@proindex')->name('pro.index');
+Route::get('/procedureindex','StudyProcedureController@proindex')->name('pro.index');
+Route::get('/procedureshow/{pro}','StudyProcedureController@proshow')->name('pro.show');
+
+Route::post('/procedureupdate/{pro}','StudyProcedureController@proupdate')->name('pro.update');
+Route::post('/proceduredestroy/{pro}','StudyProcedureController@prodestroy')->name('pro.destroy');
+
+
+
+
+
+
+});
 
 
 

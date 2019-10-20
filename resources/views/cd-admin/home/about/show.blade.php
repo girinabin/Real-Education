@@ -4,8 +4,8 @@
 	<div class="container-fluid">
 		<div class="clearfix mt-1">
 		<ul class="breadcrumb float-right">
-		  <li><a href="#">About Us</a></li>
-		  <li><a href="#">View About</a></li>
+		  <li>About Us</li>
+		  <li>View About</li>
 		</ul>
 		</div>
 			

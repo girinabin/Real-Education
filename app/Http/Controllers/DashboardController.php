@@ -9,6 +9,8 @@ use DB;
 
 class DashboardController extends Controller
 {
+    
+
     public function logout(){
 
         Auth::logout();
@@ -17,7 +19,6 @@ class DashboardController extends Controller
 
     public function index()
     {	
-    	// dd(Auth::guard());
     	$services = DB::table('services')->count();
     	$event = DB::table('events')->count();
     	$gallery = DB::table('albums')->count();

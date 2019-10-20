@@ -8603,7 +8603,7 @@ body,
 }
 
 @media (min-width: 768px) {
-  .sidebar-collapse .content-wrapper, .sidebar-collapse
+  .--collapse .content-wrapper, .sidebar-collapse
   .main-footer, .sidebar-collapse
   .main-header {
     margin-left: 0;

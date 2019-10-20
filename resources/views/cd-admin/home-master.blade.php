@@ -27,7 +27,7 @@
   <meta name="keywords" content="@yield('keyword')">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-fixed" style="height:auto;">
 
   <div class="wrapper" id="app">
 
@@ -46,7 +46,9 @@
  
 
 {{-- <script src="/js/app.js"></script> --}}
+
 <script src="{{ asset('/js/app.js') }}"></script>
+
 
 
 
@@ -83,6 +85,8 @@
     })
     })
 </script>
+
+
 
 
 @include('sweetalert::alert')
